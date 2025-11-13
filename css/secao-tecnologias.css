@@ -55,7 +55,24 @@
   background:linear-gradient(90deg, #1F4B8C 0%, #1A202C 80%);
 }
 
+@media(max-width:1260px){
+  .secao-tecnologias{
+    padding:32px 24px 64px;
+  }
 
+  .container-tecnologias{
+    padding:32px 20px 40px;
+  }
+
+  .lista-tecnologias{
+    grid-template-columns:repeat(3,2fr);
+    gap:24px;
+  }
+
+  .item-tecnologia{
+    margin:0 auto;  /* centralizado no mobile */
+  }
+}
 /* === MOBILE: empilha, aumenta gap, mas mantém tamanho fixo === */
 @media(max-width:900px){
   .secao-tecnologias{
