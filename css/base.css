@@ -1,0 +1,34 @@
+/* css/base.css */
+:root{
+  --cor-fundo:#EDF1F8;
+  --cor-texto:#1F4B8C;
+  --cor-hover:#163a6c;
+  --cor-acento:#1F4B8C;
+  --altura-header:147px;
+  --largura-logo:111px;
+  --altura-logo:81px;
+  --padding-lateral:70px;
+  --largura-maxima:1400px;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+}
+
+body{
+  font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;
+  background:var(--cor-fundo);
+  color:var(--cor-texto);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
