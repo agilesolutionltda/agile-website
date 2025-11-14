@@ -68,13 +68,14 @@
 
 @media (max-width: 1000px) {
   .secao-principal-topo {
-    padding: 40px 24px 60px;
+    padding: 0px 24px 10px;
   }
 
   .conteudo-principal-topo {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: 30px;
   }
 
   .coluna-texto-topo {
@@ -84,6 +85,8 @@
   .titulo-principal-topo {
     order: 1;
     width: 100%;
+    font-weight: 700;
+    font-size: 40px;
   }
 
   .subtitulo-principal-topo2 {
@@ -114,4 +117,5 @@
     background: #1F4B8C;
     border-radius: 26px;
   }
+
 }
