@@ -2,7 +2,14 @@
 const cabecalho=document.querySelector('[data-cabecalho]')
 const botaoMenu=document.querySelector('[data-abrir-menu]')
 const itensMenu=document.querySelectorAll('.item-menu')
+const botaoRobots = document.getElementById('botao-robots')
 
+if (botaoRobots) {
+  botaoRobots.addEventListener('click', (e) => {
+    e.stopPropagation()
+    window.location.href = "https://agilerobots.com.br/"
+  })
+}
 function ehMobile(){
   return window.innerWidth<=750
 }
@@ -34,3 +41,12 @@ window.addEventListener('resize',()=>{
     botaoMenu.setAttribute('aria-expanded','false')
   }
 })
+document.querySelectorAll("[data-ir]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const destino = btn.getAttribute("data-ir");
+    const secao = document.getElementById(destino);
+    if (secao) {
+      secao.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
