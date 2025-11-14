@@ -1,8 +1,8 @@
-.secao-principal {
+.secao-principal-topo {
   padding: 60px 70px;
 }
 
-.conteudo-secao-principal {
+.conteudo-principal-topo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,15 +11,14 @@
   margin: 0 auto;
 }
 
-/* TEXTO */
-.coluna-texto-principal {
+.coluna-texto-topo {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.titulo-principal {
+.titulo-principal-topo {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 55px;
@@ -28,7 +27,7 @@
   margin: 0;
 }
 
-.subtitulo-principal {
+.subtitulo-principal-topo {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -37,8 +36,7 @@
   margin: 0;
 }
 
-/* BOTÃO */
-.botao-principal {
+.botao-principal-topo {
   background: #1F4B8C;
   color: #fff;
   padding: 14px 32px;
@@ -51,43 +49,69 @@
   transition: .2s;
 }
 
-.botao-principal:hover {
+.botao-principal-topo:hover {
   opacity: .9;
 }
 
-/* IMAGEM / CONTAINER */
-.coluna-imagem-principal {
+.coluna-imagem-topo {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
-.container-imagem-principal {
+.container-imagem-topo {
   width: 580px;
   height: 300px;
   background: #1F4B8C;
   border-radius: 26px;
 }
 
-/* RESPONSIVO */
-@media(max-width:1000px) {
-  .conteudo-secao-principal {
+@media (max-width: 1000px) {
+  .secao-principal-topo {
+    padding: 40px 24px 60px;
+  }
+
+  .conteudo-principal-topo {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
-  .coluna-imagem-principal {
+  .coluna-texto-topo {
+    display: contents;
+  }
+
+  .titulo-principal-topo {
+    order: 1;
+    width: 100%;
+  }
+
+  .subtitulo-principal-topo2 {
+    order: 2;
+    width: 100%;
+  }
+
+  .coluna-imagem-topo {
+    order: 3;
     justify-content: center;
+    width: 100%;
   }
 
-  .container-imagem-principal {
+  .subtitulo-principal-topo:not(.subtitulo-principal-topo2) {
+    order: 4;
+    width: 100%;
+  }
+
+  .botao-principal-topo {
+    order: 5;
+    margin: 0 auto;
+  }
+
+  .container-imagem-topo {
     width: 90%;
     max-width: 500px;
+    height: 260px;
     background: #1F4B8C;
     border-radius: 26px;
-  }
-
-  .botao-principal {
-    margin: 0 auto;
   }
 }
