@@ -1,0 +1,72 @@
+.whats-flutuante{
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 68px;
+  height: 68px;
+  background-image: url('../img/whatsapp-icone.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #25D366;
+  border-radius: 50%;
+
+  box-shadow: 0 14px 35px rgba(0,0,0,.35), 
+              0 0 18px rgba(37,211,102,.4);
+
+  cursor: pointer;
+  z-index: 999;
+
+  transform: translateZ(0) scale(1) rotateY(-6deg) rotateX(4deg);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.whats-flutuante:hover{
+  transform: scale(1.06) rotateY(-2deg) rotateX(1deg) translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.45),
+              0 0 24px rgba(37,211,102,.55);
+}
+
+.whats-flutuante{
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 68px;
+  height: 68px;
+
+ background-image: url('../img/whatsapp-icone.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #25D366;
+  border-radius: 50%;
+
+  box-shadow: 0 14px 35px rgba(0,0,0,.35), 
+              0 0 22px rgba(37,211,102,.55);
+
+  cursor: pointer;
+  z-index: 999;
+
+  transform: translateZ(0) scale(1) rotateY(-6deg) rotateX(4deg);
+  transition: transform .35s ease, box-shadow .35s ease;
+
+  animation: whats-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes whats-pulse{
+  0%, 100%{
+    transform: scale(1) rotateY(-6deg) rotateX(4deg);
+    box-shadow:
+      0 14px 35px rgba(0,0,0,.35),
+      0 0 20px rgba(37,211,102,.45);
+  }
+  50%{
+    transform: scale(1.08) rotateY(-4deg) rotateX(2deg);
+    box-shadow:
+      0 22px 50px rgba(0,0,0,.55),
+      0 0 32px rgba(37,211,102,.85);
+  }
+}
+
