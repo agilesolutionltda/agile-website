@@ -30,17 +30,21 @@
 .grid-certificados{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
-  margin-top:16px;
+  gap:0;
+  margin:16px auto 0;
+  width:80%;
 }
 
-/* Card azul (placeholder) */
 .card-certificado{
   width:100%;
-  aspect-ratio: 4 / 3;         /* mantém proporção certinha */
-  border-radius:32px;
-  background:#1F4B8C;          /* azul da paleta */
+  height:400px;
+  aspect-ratio:4 / 3;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
 }
+
+
 
 /* Responsivo */
 @media(max-width:900px){
@@ -60,4 +64,8 @@
     grid-template-columns:1fr;
     gap:24px;
   }
+  .card-certificado{ 
+    height: auto;
+  }
+
 }
