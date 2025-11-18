@@ -82,7 +82,9 @@
     padding: 0 24px;
     top: 10px;
   }
-
+.logotipo{ 
+  margin-top: 5px;
+}
   .conteudo-cabecalho{
     height: 60px;
     padding: 0 18px;
