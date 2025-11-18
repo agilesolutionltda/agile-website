@@ -1,5 +1,5 @@
 .cabecalho-site{
-  position: sticky;
+  position:fixed;
   top: 16px;
   z-index: 1000;
   width: 100%;

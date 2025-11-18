@@ -1,5 +1,5 @@
 .secao-hero-principal {
-  padding: 20px 40px;
+  padding: 70px 0px;
 }
 
 .conteudo-hero-principal {
@@ -100,56 +100,25 @@
   margin-top: 8px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
+
   .secao-hero-principal {
-    padding: 0 24px 10px;
-  }
-
-  .hero-etiqueta {
-    margin: 0 auto 4px;
-  }
-
-  .hero-titulo {
-    text-align: center;
-    max-width: 320px;
-    margin: 0 auto;
-    height: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 110%;
-    color: var(--cor-texto);
-  }
-
-  .hero-subtitulo,
-  .hero-subtitulo-secundario {
-    text-align: center;
-  }
-
-  .hero-botao {
-    margin: 0 auto;
-  }
-
-  #hero-typing {
-    max-width: 100%;
-    white-space: normal;
+    padding: 40px 34px 10px;
   }
 
   .conteudo-hero-principal {
-    gap: 25px;
+    gap: 0px;
+    max-width: 80%;
+    max-height: 80%;
   }
+  
 
-  .coluna-texto-hero {
-    gap: 20px;
-  }
+
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1360px) {
   .secao-hero-principal {
-    padding: 25px 24px 10px;
+    padding: 135px 24px 10px;
   }
 
   .conteudo-hero-principal {
@@ -172,39 +141,161 @@
   .container-imagem-topo2 {
     width: 99%;
     max-width: 500px;
-    height: 280px;      /* sua altura mobile */
-    
-    overflow: hidden;   /* garante corte correto */
+    height: 360px;
+    /* sua altura mobile */
+
+    overflow: hidden;
+    /* garante corte correto */
   }
 
   .container-imagem-topo2 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* preenche toda a área */
-    object-position: center; /* centraliza */
+    object-fit: cover;
+    /* preenche toda a área */
+    object-position: center;
+    /* centraliza */
     display: block;
   }
 
   .coluna-imagem-topo2 {
-    perspective: none; /* remove o 3D */
+    perspective: none;
+    /* remove o 3D */
     justify-content: center;
   }
 
   .container-imagem-topo2 {
-    transform: none !important;   /* remove rotação */
+    transform: none !important;
+    /* remove rotação */
   }
 
   .coluna-imagem-topo2:hover .container-imagem-topo2 {
-    transform: none !important;   /* remove o hover */
+    transform: none !important;
+    /* remove o hover */
   }
 
   .imagem-gildonei {
-    filter: none !important;      /* remove sombra */
-    border-radius: 18px;          /* leve ajuste opcional */
+    filter: none !important;
+    /* remove sombra */
+    border-radius: 18px;
+    /* leve ajuste opcional */
   }
 
   .coluna-imagem-topo2:hover .imagem-gildonei {
-    filter: none !important;      /* remove sombra no hover */
+    filter: none !important;
+    /* remove sombra no hover */
+  }
+
+  .hero-titulo {
+    order: 1;
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 30px;
+  }
+
+  .coluna-imagem-hero {
+    order: 3;
+    justify-content: center;
+    width: 100%;
+    perspective: none;
+  }
+
+  .hero-subtitulo {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-subtitulo-secundario {
+    order: 4;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-botao {
+    order: 5;
+    margin: 0 auto;
+  }
+
+  #hero-typing {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 550px) {
+  .secao-hero-principal {
+    padding: 95px 24px 10px;
+  }
+
+  .conteudo-hero-principal {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .coluna-texto-hero {
+    display: contents;
+  }
+
+  .hero-etiqueta {
+    width: 80%;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .container-imagem-topo2 {
+    width: 99%;
+    max-width: 500px;
+    height: 280px;
+    /* sua altura mobile */
+
+    overflow: hidden;
+    /* garante corte correto */
+  }
+
+  .container-imagem-topo2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* preenche toda a área */
+    object-position: center;
+    /* centraliza */
+    display: block;
+  }
+
+  .coluna-imagem-topo2 {
+    perspective: none;
+    /* remove o 3D */
+    justify-content: center;
+  }
+
+  .container-imagem-topo2 {
+    transform: none !important;
+    /* remove rotação */
+  }
+
+  .coluna-imagem-topo2:hover .container-imagem-topo2 {
+    transform: none !important;
+    /* remove o hover */
+  }
+
+  .imagem-gildonei {
+    filter: none !important;
+    /* remove sombra */
+    border-radius: 18px;
+    /* leve ajuste opcional */
+  }
+
+  .coluna-imagem-topo2:hover .imagem-gildonei {
+    filter: none !important;
+    /* remove sombra no hover */
   }
 
   .hero-titulo {
