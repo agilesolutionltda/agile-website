@@ -129,6 +129,33 @@
   color:#2D3748;
   max-width:320px;
 }
+.container-servicos::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:linear-gradient(120deg, rgba(255,255,255,0.16), transparent 45%, rgba(255,255,255,0.08));
+  transform:translateX(-80%) skewX(-12deg);
+  animation:reflexo-servicos 10s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes reflexo-servicos{
+  0%{
+    transform:translateX(-80%) skewX(-12deg);
+    opacity:0;
+  }
+  25%{
+    opacity:0.6;
+  }
+  60%{
+    transform:translateX(35%) skewX(-12deg);
+    opacity:0.25;
+  }
+  100%{
+    transform:translateX(120%) skewX(-12deg);
+    opacity:0;
+  }
+}
 
 
 @media(max-width:900px){
