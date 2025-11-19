@@ -1,47 +1,42 @@
-// js/secao-servicos.js
-const carrosselServicos=document.querySelector('[data-carrossel-servicos]')
-let arrastando=false
-let inicioX=0
-let scrollInicial=0
+const carrosselServicos = document.querySelector('[data-carrossel-servicos]')
 
-if(carrosselServicos){
-  carrosselServicos.addEventListener('mousedown',e=>{
-    arrastando=true
-    carrosselServicos.classList.add('arrastando')
-    inicioX=e.pageX-carrosselServicos.offsetLeft
-    scrollInicial=carrosselServicos.scrollLeft
-  })
+if (carrosselServicos) {
 
-  window.addEventListener('mouseup',()=>{
-    arrastando=false
-    carrosselServicos.classList.remove('arrastando')
-  })
+  function iniciarCarrossel() {
+    const larguraOriginal = carrosselServicos.scrollWidth
 
-  window.addEventListener('mousemove',e=>{
-    if(!arrastando)return
-    e.preventDefault()
-    const x=e.pageX-carrosselServicos.offsetLeft
-    const deslocamento=x-inicioX
-    carrosselServicos.scrollLeft=scrollInicial-deslocamento
-  })
+    if (larguraOriginal === 0) {
+      setTimeout(iniciarCarrossel, 100)
+      return
+    }
 
-  carrosselServicos.addEventListener('touchstart',e=>{
-    const toque=e.touches[0]
-    arrastando=true
-    inicioX=toque.pageX-carrosselServicos.offsetLeft
-    scrollInicial=carrosselServicos.scrollLeft
-  })
+    carrosselServicos.innerHTML += carrosselServicos.innerHTML
 
-  carrosselServicos.addEventListener('touchend',()=>{
-    arrastando=false
-    carrosselServicos.classList.remove('arrastando')
-  })
+    let limite = carrosselServicos.scrollWidth / 2
+    let pos = 0
+    let pausado = false
+    const velocidade = 0.35
 
-  carrosselServicos.addEventListener('touchmove',e=>{
-    if(!arrastando)return
-    const toque=e.touches[0]
-    const x=toque.pageX-carrosselServicos.offsetLeft
-    const deslocamento=x-inicioX
-    carrosselServicos.scrollLeft=scrollInicial-deslocamento
-  })
+    function animar() {
+      if (!pausado) {
+        pos += velocidade
+        if (pos >= limite) {
+          pos = 0
+        }
+        carrosselServicos.scrollLeft = pos
+      }
+      requestAnimationFrame(animar)
+    }
+
+    carrosselServicos.addEventListener('mouseenter', () => pausado = true)
+    carrosselServicos.addEventListener('mouseleave', () => pausado = false)
+
+    window.addEventListener('resize', () => {
+      limite = carrosselServicos.scrollWidth / 2
+    })
+
+    animar()
+  }
+
+  setTimeout(iniciarCarrossel, 150)
 }

@@ -62,16 +62,16 @@
 .lista-cartoes-servicos{
   display:flex;
   gap:24px;
-  overflow-x:auto;
-  overflow-y:hidden;
-  padding-bottom:8px;
+  overflow:hidden;
+  padding-bottom:4px;
+  padding-top: 4px;
   scrollbar-width:none;
-  cursor:grab;
 }
 
 .lista-cartoes-servicos::-webkit-scrollbar{
   display:none;
 }
+
 
 
 .lista-cartoes-servicos.arrastando{
