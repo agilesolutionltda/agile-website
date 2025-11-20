@@ -1,5 +1,5 @@
 .secao-principal-topo {
-  padding: 60px 70px;
+  padding: 0px 0px 0px 0px;
 }
 
 .conteudo-principal-topo {
@@ -7,9 +7,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 70px;
-  max-width: 1400px;
+  max-width: 1300px;
+  max-height: 630px;
   margin: 0 auto;
 }
+
+
 
 .coluna-texto-topo {
   flex: 1;
@@ -74,6 +77,15 @@
   transition: transform .7s ease;
 }
 
+.container-imagem-topo3 {
+  padding-bottom: 130px;
+}
+
+.container-imagem-topo3 img {
+  height: 110%;
+}
+
+
 /* imagens */
 .imagem-robots,
 .imagem-int {
@@ -96,7 +108,41 @@
   filter: drop-shadow(0 26px 70px rgba(0, 0, 0, 0.75));
 }
 
+@media (max-width: 1700px) {
+  .coluna-texto-topo {
+    padding-left: 55px;
+
+  }
+
+  .conteudo-principal-topo {
+    padding-top: 60px;
+  }
+
+  .conteudo-principal-topo {
+
+    max-height: 1280px;
+
+  }
+}
+
+@media (max-width: 1500px) {
+  .coluna-texto-topo {
+
+
+    padding: 0px 30px;
+  }
+
+
+
+  .conteudo-principal-topo {
+    padding-top: 60px;
+  }
+}
+
 @media (max-width: 1000px) {
+  .container-imagem-topo3 {
+  padding-bottom: 0px;
+}
   .secao-principal-topo {
     padding: 0px 24px 10px;
   }
@@ -106,6 +152,7 @@
     text-align: center;
     align-items: center;
     gap: 30px;
+    padding-top: 0px;
   }
 
   .coluna-texto-topo {
@@ -122,6 +169,7 @@
   .subtitulo-principal-topo2 {
     order: 2;
     width: 100%;
+    
   }
 
   .coluna-imagem-topo {
@@ -129,7 +177,7 @@
     justify-content: center;
     width: 100%;
     perspective: none;
-    
+
   }
 
   .subtitulo-principal-topo:not(.subtitulo-principal-topo2) {
@@ -143,13 +191,23 @@
   }
 
   /* container corrigido: sem fundo, controle total pela imagem */
-  .container-imagem-topo {
+  .container-imagem-topo3 {
     width: 99%;
     max-width: 500px;
-    height: 420px;
+    height: 250px;
     border-radius: 26px;
     overflow: hidden;
-    
+    padding-bottom: 15px;
+    transform: none;
+  }
+
+   .container-imagem-topo4 {
+    width: 99%;
+    max-width: 500px;
+    height: 310px;
+    border-radius: 26px;
+    overflow: hidden;
+    padding-top: 19px;
     transform: none;
   }
 
