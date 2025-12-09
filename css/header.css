@@ -1,5 +1,5 @@
-.cabecalho-site{
-  position:fixed;
+.cabecalho-site {
+  position: fixed;
   top: 16px;
   z-index: 1000;
   width: 100%;
@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-.conteudo-cabecalho{
+.conteudo-cabecalho {
   width: 100%;
   max-width: 1400px;
   height: 74px;
@@ -18,36 +18,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:radial-gradient(circle at 0% 0%, #273554 0%, #1A202C 55%, #151927 100%);
+  background: radial-gradient(circle at 0% 0%, #273554 0%, #1A202C 55%, #151927 100%);
   border-radius: 18px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
 }
 
-.area-logotipo{
+.area-logotipo {
   display: flex;
   align-items: center;
 }
 
-.logotipo{
+.logotipo {
   width: var(--largura-logo);
   height: var(--altura-logo);
   object-fit: contain;
 }
 
-.area-menu{
+.area-menu {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-.menu-navegacao{
+.menu-navegacao {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.item-menu{
+.item-menu {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -58,11 +58,11 @@
   padding: 4px 0;
 }
 
-.item-menu:hover{
+.item-menu:hover {
   color: #E0F2FE;
 }
 
-.icone-menu{
+.icone-menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,25 +73,29 @@
   cursor: pointer;
 }
 
-.icone-menu svg rect{
+.icone-menu svg rect {
   fill: #F9FAFB;
 }
 
-@media(max-width:750px){
-  .cabecalho-site{
+@media(max-width:750px) {
+  .cabecalho-site {
     padding: 0 24px;
     top: 10px;
   }
-.logotipo{ 
-  margin-top: 5px;
-}
-  .conteudo-cabecalho{
+
+  .logotipo {
+    margin-top: 5px;
+    width: var(--largura-logo);
+    height: 47px;
+  }
+
+  .conteudo-cabecalho {
     height: 60px;
     padding: 0 18px;
     border-radius: 16px;
   }
 
-  .menu-navegacao{
+  .menu-navegacao {
     display: none;
     position: absolute;
     top: 100%;
@@ -102,14 +106,14 @@
     flex-direction: column;
     gap: 12px;
     border-radius: 14px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
   }
 
-  .cabecalho-aberto .menu-navegacao{
+  .cabecalho-aberto .menu-navegacao {
     display: flex;
   }
 
-  .item-menu{
+  .item-menu {
     width: 100%;
     text-align: right;
   }
