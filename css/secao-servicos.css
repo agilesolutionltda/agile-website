@@ -1,3 +1,5 @@
+
+
 .secao-servicos {
   padding: 0px 70px 40px;
   display: flex;
@@ -137,22 +139,39 @@
   pointer-events: none;
 }
 
+/* ÍCONE NO PADRÃO DA IMAGEM */
+
 .icone-cartao-servico {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: rgba(31, 75, 140, 0.09);
-  margin-bottom: 14px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(31, 75, 140, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  margin-bottom: 16px;
 }
 
 .icone-cartao-servico svg {
-  width: 22px;
-  height: 22px;
-  color: #1F4B8C;
+  width: 15px;
+  height: 15px;
+  color: #1F75FF;
+  /* azul suave igual ao exemplo */
+  opacity: 0.9;
 }
+
+.cartao-servico:hover .icone-cartao-servico {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(31, 75, 140, 0.18));
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cartao-servico:hover .icone-cartao-servico svg {
+  color: #4FA3FF;
+  opacity: 1;
+}
+
 
 
 @keyframes reflexo-servicos {
