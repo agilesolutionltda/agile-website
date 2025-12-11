@@ -228,19 +228,3 @@
   }
 }
 
-@media(max-width:407px) {
-  .cartao-servico {
-    min-width: 250px;
-    max-width: 260px;
-    justify-content: center;
-  }
-
-}
-@media(max-width:385px) {
-  .cartao-servico {
-    min-width: 230px;
-    max-width: 245px;
-    justify-content: center;
-  }
-
-}
