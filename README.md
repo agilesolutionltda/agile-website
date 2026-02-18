@@ -137,7 +137,7 @@ The main goal is to **present the company, build trust and generate qualified le
 ## Créditos
 
 **Developed by:** Filipe Scandiani  
-**Design by:** Hugo Soave
+**Designed by:** Hugo Soave
 
 
 
